@@ -13,21 +13,6 @@ services:
     networks:
       - custom
 
-  mongodb:
-    image: mongo:latest
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: root
-      MONGO_INITDB_ROOT_PASSWORD: 1234
-    ports:
-      - "27017:27017"
-    volumes:
-      - dbdata6:/data/db
-    networks:
-      - custom
-
-volumes:
-  dbdata6:
-
 networks:
   custom:
     driver: bridge
